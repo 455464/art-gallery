@@ -1,0 +1,87 @@
+.wrapper{
+    display: block;
+
+}
+
+.box-info{
+    margin: 8px auto;
+    width: 50%;
+    text-align: center;
+    border: 1px solid #000;
+    border-radius: 100px;
+}
+.img-container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 8px;
+}
+
+.img-item{
+    margin: 12px 24px;
+    width: 50%;
+    
+}
+
+.post-title{
+    margin: 8px;
+
+
+}
+
+.post-artist{
+    margin: 12px;
+    box-sizing: border-box;
+}
+
+.post-date{
+    margin: 8px 0;
+}
+
+.post-download{
+    margin: 16px 0;
+}
+
+.post-link{
+    text-decoration: none;
+    &:hover{
+        animation: highlightLink ease .3s forwards;
+    }
+    &:visited{
+        color: blue;
+    }
+    animation: revHighlightLink ease .3s forwards;
+}
+
+.artist-link{
+    text-decoration: none;
+
+
+    &:hover{
+        animation: highlightLink ease .3s forwards;
+    }
+    animation: revHighlightLink ease .3s forwards;
+}
+@keyframes highlightLink {
+    from{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+    to{
+        font-weight: 500;
+        font-size: 1.1rem;
+
+    }
+}
+
+@keyframes revHighlightLink {
+    from{
+        font-weight: 500;
+        font-size: 1.1rem;
+    }
+    to{
+        font-weight: 400;
+        font-size: 1rem;
+    }
+}

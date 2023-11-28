@@ -1,0 +1,123 @@
+.wrapper{
+    margin: 20px 36px;
+    display: block;
+    background-image: linear-gradient(#fff,#eee);
+}
+
+.heading{
+    display: flex;
+    justify-content: center;
+    margin: 24px 0 0;
+}
+
+.heading-title{
+    margin: 0 8px;
+    font-size: 1.6rem;
+}
+
+
+.see-more{
+    display: flex;
+    justify-content: center;
+    
+}
+.btn-latest{
+    margin-bottom: 20px;
+    border: none;
+    padding: 10px 14px;
+    background-color:#fbd153;
+    
+    &:hover{
+        cursor: pointer;
+        opacity: 0.8;
+        
+    }
+}
+
+.item-link{
+    text-decoration: none;
+}
+
+.item-list{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.item-box{
+    margin: 40px 8px;
+    width: 20%;
+    border: 1px solid #000;
+    display: flex;
+    position: relative;
+    height: 300px;
+    background-size: cover ;
+    &:hover{
+        cursor: pointer; 
+        animation: itemHover .3s ease-in-out forwards;
+    }
+    animation: itemDehover .3s ease-in-out forwards;   
+}
+
+.item-info{
+    width: 100%;
+    background-color: rgba($color: #ccc, $alpha: 0.8);
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    bottom: 0;
+    align-items: center;
+    
+}
+
+.item-title{
+    display: flex;
+    margin: 8px;
+    text-decoration: none;
+}
+
+.item-artist{
+    display: flex;
+    margin: 4px;
+    text-decoration: none;    
+}
+
+.item-date{
+    display: flex;
+    margin: 4px;
+}
+
+@keyframes itemHover {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-3%);
+    }
+}
+
+@keyframes itemDehover {
+    0%{
+        transform: translateY(-3%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .heading-title{
+        font-size: 1.3rem;
+    }
+
+    .heading-separator{
+
+        display: flex;
+        align-content: center;
+
+    }
+    .item-box{
+        width: 100%;
+    }
+}

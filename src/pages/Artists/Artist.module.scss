@@ -1,0 +1,70 @@
+.wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist-box{
+    display: flex;
+    margin: 24px 16px;
+    width: 30%;
+    border: 1px solid #ccc;
+    height: 150px;
+    position: relative;
+    border-radius: 50px;
+    &:hover{
+        animation: itemHover .3s ease forwards;
+    }
+    animation: itemDehover .3s ease forwards;
+}
+
+.artist-info{
+    position: absolute; 
+    z-index: 1;
+    display: flex;
+    background-color: rgba($color: #ccc, $alpha: 0.8);
+    bottom: 0;
+    border-radius: 0 0 50px 50px;
+    width: 100%;
+}
+.artist-bg{
+    height: 100%;
+    width: 100%;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    border-radius: 50px;
+}
+
+.artist-avatar{
+    opacity: 1.5;
+    width: 15%;
+    height: 50%;
+    border-radius: 500px;
+    align-self: flex-end;
+    // bottom: 10px;
+    padding: 5px;
+    margin-left: 24px;
+}
+
+.artist-name{
+    align-self: flex-end;
+    margin: 10px;
+}
+
+
+@keyframes itemHover {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-3%);
+    }
+}
+
+@keyframes itemDehover {
+    0%{
+        transform: translateY(-3%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
