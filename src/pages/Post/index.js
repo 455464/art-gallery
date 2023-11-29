@@ -11,17 +11,10 @@ import { useFormatDate } from "../../hooks/useFormatDate";
 const cn = classNames.bind(styles);
 
 function Post() {
-  // const [postNum, setPostNum] = useState(8)
-  // const [lastDoc, setLastDoc] = useState(null)
   const [postList, setPostList] = useState([]);
     useEffect(() =>{
         const fetchData = async() => {
             const postQuery = query(postColRef,orderBy('date_create','desc'))
-
-            // if (lastDoc){
-            //   postQuery = query(postColRef,orderBy('date_create','desc'),startAfter(lastDoc),limit(postNum))
-            // }
-
             const postSnapshot = await getDocs(postQuery)
             
             const postData = postSnapshot.docs.map((doc) => ({
@@ -40,19 +33,11 @@ function Post() {
                 artist: artistData.find((artistAttr) => artistAttr.id === postAttr.artist),
               
               }));
-            // if (postData.length > 0) {
-            //   setLastDoc(postSnapshot.docs[postSnapshot.docs.length - 1]);
-            // }
+
             setPostList(postJoin)
         }
         fetchData()
     },[])
-
-
-
-    // const loadMoreRecords = () => {
-    //   setPostNum(postNum + 8);
-    // };
 
     const formatDate = useFormatDate
 
@@ -97,7 +82,6 @@ function Post() {
             </Link>
         ))}
         </div>
-        {/* <button className={cn('btn-latest')}>See more</button> */}
        </div>  
     </div> );
 }

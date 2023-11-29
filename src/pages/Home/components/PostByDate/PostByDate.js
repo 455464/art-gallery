@@ -63,7 +63,7 @@ function PostByDate() {
     <div className={cn('item-list')}>
         {postList.map((post)=>(
             <Link key={post.id} to={`/post/${post.id}`} className={cn('item-box')} onClick={() => increaseView(post.id)}
-                  style={{backgroundImage: `url(https://drive.google.com/uc?export=view&id=${post.img})`}}
+                  style={{backgroundImage: `url(${post.img})`}}
                   >
             <div  id={`post_${post.id}`}>
                 <div className={cn("item-info")}>

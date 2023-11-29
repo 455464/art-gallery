@@ -44,7 +44,7 @@ function PostDetail() {
                     return (
                       <img
                         key={`${index}`}
-                        src={`https://drive.google.com/uc?export=view&id=${imageObj.src}&s=600x400`}
+                        src={`${imageObj.src}`}
                         placeholder={imageObj.place_holder}
                         alt={`${index}`}
                         className={cn('img-item')}

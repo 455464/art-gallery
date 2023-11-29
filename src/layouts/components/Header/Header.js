@@ -19,11 +19,6 @@ const MENU_ITEMS = [
         title: 'Artists',
         to: '/artists',
     },
-    // {
-    //     icon: <FontAwesomeIcon icon={faTags}/>,
-    //     title: 'Tags',
-    //     to: '/tags',
-    // }
 ]
 
 function Header() {

@@ -11,7 +11,7 @@ function PostItem({ data, onClick }) {
     return (
         <Link to={`/post/${data.id}`} className={cx('wrapper')} onClick={handleClick}>
             <img className={cx('avatar')} 
-                 src={`https://drive.google.com/uc?export=view&id=${data.img}&s=800x600`}
+                 src={`${data.img}`}
                  alt={data.name} />
             <div className={cx('info')}>
                 <h4 className={cx('name')}>
